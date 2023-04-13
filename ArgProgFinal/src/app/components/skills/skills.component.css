@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.col{
+    margin: 10px;
+    padding: 15px;
+}
+
+.col-barra, .col-titulo{
+    padding: 0;
+    margin: 0;
+}
+
+.sep{
+    height: 50px;
+}
+
+.skill-name{
+    font-size: 18px;
+    color: var(--color-30);
+    padding-bottom: 30px;
+}
+
+.skill-bar{
+    height: 14px;
+    background: var(--color-60-c);
+    border-radius: 3px;
+}
+
+.skill-per{
+    height: 14px;
+    background: var(--color-10);
+    border-radius: 3px;
+    position: relative;
+    animation: fillbars 3s 1;
+}
+
+.skill-per::before{
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background: var(--color-10);
+    border-radius: 4px;
+    font-size: 12px;
+    top: -35px;
+    right: 0;
+    transform: translateX(50%);
+    color: var(--color-30);
+}
+.skill-per::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: var(--color-10);
+    font-size: 12px;
+    top: -15px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+    border-radius: 2px;
+}
+
+@keyframes fillbars{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+.custom-col {
+    max-width: 25px;
+    min-width: 25px;
+}
+  
+
+.rtit{
+    height: 32px;
+}
+
+.rin{
+    height: 40px;
+}
+
+
+.titulo{
+    height: 100%;
+    color: var(--color-30);
+    font-size: 28px;
+  }
+  
+  .barra{
+    height: 100%;
+    width: 5px;
+    margin-left: 10px;
+    background-color: var(--color-10);
+  }
+  

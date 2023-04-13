@@ -1,0 +1,200 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.row{
+    height: 100px;
+    width: auto;
+    position: relative;
+}
+
+.sep{
+    height: 105px;
+}
+
+.rbar{
+    height: 110px;
+    line-height: 1.1;
+}
+
+/*INICIO DE CONTENEDOR*/
+
+.container{
+    width: 68%;
+    left: 16%;
+    position: relative;
+    right: calc(16% + ((100% - 68%) / 2));
+}
+/*INICIO DE BARRA Y CIRCULOS DE AÑO*/
+.steps{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.progress-bar {
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    z-index: 1;
+}
+
+.indicator{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: var(--color-10);
+}
+
+.container .steps .circle {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    max-height: 54px;
+    max-width: 54px;
+    min-height: 54px;
+    min-width: 54px;
+    color: var(--color-30);
+    font-size: 14px;
+    border-radius: 50%;
+    z-index: 2;
+    border: 3px solid var(--color-10);
+    background-color: var(--color-10);;
+}
+
+.container .steps .circle:nth-child(1) {
+    left: 0%;
+    transform: translateX(-50%);
+}
+
+.container .steps .circle:nth-child(2) {
+    left: 33.33%;
+    transform: translateX(-50%);
+}
+
+.container .steps .circle:nth-child(3) {
+    left: 66.66%;
+    transform: translateX(-50%);
+}
+
+.container .steps .circle:nth-child(4) {
+    left: 100%;
+    transform: translateX(-50%);
+}
+
+/*INICIO DE CONTENEDOR PARA EMPRESA*/
+.steps-t{
+    display: flex;
+    width: 100%;
+}
+
+.cuadrado{
+    top: 28%;
+    position: absolute;
+    max-width: 184px;
+    max-height: 40px;
+    min-width: 184px;
+    min-height: 40px;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    font-size: 16px;
+    overflow: hidden;
+    padding: 4px;
+    text-overflow: ellipsis;
+    color: var(--color-10);
+}
+
+.container .steps-t .cuadrado:nth-child(1) {
+    left: 0%;
+    transform: translateX(-50%);
+}
+
+.container .steps-t .cuadrado:nth-child(2) {
+    left: 33.33%;
+    transform: translateX(-50%);
+}
+
+.container .steps-t .cuadrado:nth-child(3) {
+    left: 66.66%;
+    transform: translateX(-50%);
+}
+
+.container .steps-t .cuadrado:nth-child(4) {
+    left: 100%;
+    transform: translateX(-50%);
+}
+
+/*INICIO DE CUADRADOS PARA PUESTO LABORAL*/
+
+.steps-p{
+    display: flex;
+    width: 100%;
+}
+
+.cuadradop{
+    top: 54%;
+    position: absolute;
+    max-width: 162px;
+    max-height: 50px;
+    min-width: 162px;
+    min-height: 50px;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    overflow: hidden;
+    padding: 4px;
+    font-size: 16px;
+    text-overflow: ellipsis;
+    color: var(--color-30);
+}
+
+.container .steps-p .cuadradop:nth-child(1) {
+    left: 0%;
+    transform: translateX(-50%);
+}
+
+.container .steps-p .cuadradop:nth-child(2) {
+    left: 33.33%;
+    transform: translateX(-50%);
+}
+
+.container .steps-p .cuadradop:nth-child(3) {
+    left: 66.66%;
+    transform: translateX(-50%);
+}
+
+.container .steps-p .cuadradop:nth-child(4) {
+    left: 100%;
+    transform: translateX(-50%);
+}
+
+.custom-col {
+    max-width: 25px;
+    min-width: 25px;
+}
+
+.rtit{
+    height: 32px;
+}
+
+.rin{
+    height: 40px;
+}
+
+.titulo{
+    height: 100%;
+    color: var(--color-30);
+    font-size: 28px;
+  }
+  
+  .barra{
+    height: 100%;
+    width: 5px;
+    margin-left: 10px;
+    background-color: var(--color-10);
+  }
+  

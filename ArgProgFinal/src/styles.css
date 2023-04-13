@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-60);
+
+    /*COLORES DEFINITIVOS OSEA LA POSTA*/
+    --color-10: #6BBF5E;
+    --color-30: #f4fff2;
+    --color-60:#131413;
+    --color-60-c:#1c1f1c;
+}
