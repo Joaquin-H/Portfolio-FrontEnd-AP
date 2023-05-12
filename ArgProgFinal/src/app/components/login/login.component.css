@@ -1,0 +1,55 @@
+*{
+    color: var(--color-30);
+}
+
+.row {
+    position: absolute;
+    background-color: var(--color-60-c);
+    height: 100vh;
+    width: 100%;
+  }
+
+.crow{
+    position: relative;
+    width: 30%;
+    height: 40%;
+    left: 35%;
+    right: 35%;
+}
+
+
+.form-control{
+    margin-bottom: 15px;
+    color: var(--color-10);
+}
+
+h4{
+    position: relative;
+    text-align: center;
+    margin-bottom: 40px; /* Agregamos un margen inferior para separar el título del resto del contenido */
+}
+.ccol{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contra{
+    color: var(--color-10);
+    text-decoration: none;
+}
+
+.btn{ 
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    border-radius: 5px;
+    border: 20px;
+    color: var(--color-30);
+    background-color: var(--color-10);
+}
+
+.check {
+    font-size: 16px;
+    color: var(--color-10);
+    cursor: pointer;
+}

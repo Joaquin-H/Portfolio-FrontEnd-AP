@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col">
+        <div class="crow">
+          <h4>LOGIN</h4>
+        </div>
+        <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+
+          <div class="crow">
+            <input type="text" id="nombreUsuario"  class="form-control" placeholder="Usuario" [(ngModel)]="nombreUsuario" name="nombreUsuario" required>
+          </div>
+          <div class="crow">
+            <input type="password" id="password"  class="form-control" placeholder="Contraseña" [(ngModel)]="password" name="password" required>
+          </div>
+
+          <div class="crow">
+            <div class="ccol">
+              <label class="check" for="rememberMe">
+                <input type="checkbox" id="rememberMe" name="rememberMe" class="form-check-input">
+                <span class="checkmark"></span>
+                Recordarme
+              </label>
+              <a href="#" class="contra">Contraseña?</a>
+            </div>
+
+          </div> 
+
+          <div class="crow">
+            <button class="btn" type="submit">Login</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>

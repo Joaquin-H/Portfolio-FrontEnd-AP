@@ -11,7 +11,8 @@
                 <a href=""  target="_blank"><img src="../../../assets/instagram.png" class="icon instagram" alt="Icono instagram"></a>
             </div>
             <div class="col col-md-1">
-                <button type="button" class="btn btn-outline-light btn-sm">LOGIN</button>
+                <button class="btn" type="button" (click)="login()" *ngIf="!isLogged">Login</button>
+                <button class="btn" type="button" (click)="onLogOut()" *ngIf="isLogged">Logout</button>
             </div>
     </div>
 </div>
