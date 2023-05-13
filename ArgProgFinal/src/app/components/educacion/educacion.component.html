@@ -11,26 +11,34 @@
   </div>
     <div class="row sep"></div>
     <div class="row rbar">
-      <div class="container ">
+      <div class="container">
         <div class="progress-bar" id="progress-bar">
           <span class="indicator"></span>
         </div>
-        <div *ngFor="let edu of educacion; let i = index">
-          <div class="card car{{i+1}}">
-            <div class="face1">
-              <span class="circle ci{{i+1}}">{{edu.anioEd}}</span>
-              <span class="cuadrado c{{i+1}}">{{edu.nombreEd}}</span>
+        <div class="contenedort" *ngFor="let edu of educacion; let i = index">
+            <div class="card car{{i+1}}">
+              <div class="face face1">
+                <div class="content1">
+                  <span class="nom c{{i+1}}">{{edu.nombreEd}}</span>
+                </div>
+              </div>
+              <div class="card car{{i+1}}">
+                <div class="face face2">
+                  <div class="content2">
+                    <span class="anio ci{{i+1}}">{{edu.anioEd}} </span>
+                    <span class="desc cp{{i+1}}">{{edu.descripcionEd}}</span>
+                  </div>
+                </div>
+              </div>
+              <div class="face3">
+                <button class="button editar" routerLink="/editedu/{{edu.id}}" *ngIf="isLogged">
+                  <i class="bi bi-pencil"></i>
+                </button>
+                <button class="button borrar" *ngIf="isLogged" (click)="delete(edu.id)">
+                  <i class="bi bi-x"></i>
+                </button>
+              </div>
             </div>
-            <div class="face2">
-              <span class="cuadradop cp{{i+1}}">{{edu.descripcionEd}}</span>
-            </div>
-          </div>
-          <button class="botones editar" routerLink="/editedu/{{edu.id}}" *ngIf="isLogged">
-            <i class="bi bi-pencil"></i>
-          </button>
-          <button class="botones borrar" *ngIf="isLogged" (click)="delete(edu.id)">
-            <i class="bi bi-x"></i>
-          </button>
         </div>
       </div>
     </div>

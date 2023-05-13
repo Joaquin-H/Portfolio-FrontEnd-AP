@@ -6,33 +6,41 @@
     </div>
     <div class="col col-sm-11 col-md-11 col-lg-11">
       <h1 class="titulo">Trabajo</h1>
-      <button class="botones crear" routerLink="/nuevaexp" *ngIf="isLogged"><i class="bi bi-plus"></i></button>
+      <button class="crear" routerLink="/nuevaexp" *ngIf="isLogged"><i class="bi bi-plus"></i></button>
     </div>
   </div>
     <div class="row sep"></div>
     <div class="row rbar">
-      <div class="container ">
+      <div class="container">
         <div class="progress-bar" id="progress-bar">
           <span class="indicator"></span>
         </div>
-        <div *ngFor="let experiencia of expe; let i = index">
+        <div class="contenedort" *ngFor="let experiencia of expe; let i = index">
           <div class="card car{{i+1}}">
-            <div class="face1">
-              <span class="circle ci{{i+1}}">{{experiencia.anioE}}</span>
-              <span class="cuadrado c{{i+1}}">{{experiencia.nombreE}}</span>
+            <div class="face face1">
+              <div class="content1">
+                <span class="nom c{{i+1}}">{{experiencia.nombreE}}</span>
+              </div>
             </div>
-            <div class="face2">
-              <span class="cuadradop cp{{i+1}}">{{experiencia.descripcionE}}</span>
+              <div class="face face2">
+                <div class="content2">
+                  <span class="anio ci{{i+1}}">{{experiencia.anioE}} </span>
+                  <span class="desc cp{{i+1}}">{{experiencia.descripcionE}}</span>
+                </div>
+            </div>
+            <div class="face3">
+                <button class="button editar" routerLink="/editexp/{{experiencia.id}}" *ngIf="isLogged">
+                  <i class="bi bi-pencil"></i>
+                </button>
+                <button class="button borrar" *ngIf="isLogged" (click)="delete(experiencia.id)">
+                  <i class="bi bi-x"></i>
+                </button>
             </div>
           </div>
-          <button class="botones editar" routerLink="/editexp/{{experiencia.id}}" *ngIf="isLogged">
-            <i class="bi bi-pencil"></i>
-          </button>
-          <button class="botones borrar" *ngIf="isLogged" (click)="delete(experiencia.id)">
-            <i class="bi bi-x"></i>
-          </button>
         </div>
+        
       </div>
+      
     </div>
       <div class="row sep"></div>
 </div>
