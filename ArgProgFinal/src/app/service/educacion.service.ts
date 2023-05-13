@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class EducacionService {
-  edURL = 'http://localhost:8080/educacion/';
+  edURL = 'https://backend-ap-okyt.onrender.com/educacion/';
 
 
   constructor(private httpClient: HttpClient) { }

@@ -8,11 +8,12 @@ import { persona } from '../model/persona.model';
 })
 
 export class PersonaService {
-  URL = 'http://localhost:8080/personas/';
+  URL = 'https://backend-ap-okyt.onrender.com/personas/';
 
   constructor(private http: HttpClient) { }
 
-  public getPersona(): Observable<persona>{
-    return this.http.get<persona>(this.URL+ 'traer/perfil');
+  public detail(id:number): Observable<persona>{
+    return this.http.get<persona>(this.URL+ `detail/${id}`);
   }
+
 }
