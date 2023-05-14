@@ -8,7 +8,6 @@ import { Skills } from '../model/skills';
 })
 export class SkillService {
   skillsURL = 'https://backend-ap-okyt.onrender.com/hys/';
-  //skillsURL = 'http://localhost:8080/hys/';
 
   constructor(private httpClient: HttpClient) { }
 

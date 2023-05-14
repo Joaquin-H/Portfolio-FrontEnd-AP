@@ -8,7 +8,6 @@ import { Experiencia } from '../model/experiencia';
 })
 export class SExperienciaService {
   expURL = 'https://backend-ap-okyt.onrender.com/explab/';
-  //expURL = 'http://localhost:8080/explab/';
 
 
   constructor(private httpClient: HttpClient) { }

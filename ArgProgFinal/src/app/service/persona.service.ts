@@ -9,7 +9,6 @@ import { Persona } from '../model/persona';
 
 export class PersonaService {
   URL = 'https://backend-ap-okyt.onrender.com/personas/';
-  //URL = 'http://localhost:8080/personas/';
 
   constructor(private http: HttpClient) { }
 
@@ -24,16 +23,5 @@ export class PersonaService {
   public update(id: number,persona: Persona): Observable<any>{
     return this.http.put<any>(this.URL + `update/${id}`,persona);
   }
-
-  /*
-  public save(persona: Persona): Observable<any>{
-    return this.http.post<any>(this.URL + 'create',persona);
-  }
-
-
-  public delete(id: number): Observable<any>{
-    return this.http.delete<any>(this.URL + `delete/${id}`);
-  }
-  */
 
 }

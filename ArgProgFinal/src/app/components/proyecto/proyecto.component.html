@@ -5,83 +5,31 @@
         </div>
         <div class="col col-sm-11 col-md-11 col-lg-11 col-titulo">
           <h1 class="titulo">Proyectos</h1>
+          <button class="crear" routerLink="/newproyecto" *ngIf="isLogged"><i class="bi bi-plus"></i></button>
         </div>
     </div>
     <div class="row sep"></div>
     <div class="row">
-        <div class="col col-md-4 col-sm-6 col-card">
-            <div class="card c1">
+        <div class="col col-md-4 col-sm-6 col-card" *ngFor="let proyecto of proyectos; let i = index" >
+            <div class="card c{{i+1}}">
                 <div class="card-cont">
                     <div class="card-frente">
+                      <img src={{proyecto?.img}} id="perfil">
                     </div>
                     <div class="card-atras">
-                        <h5 class="card-fecha">Fecha</h5>
-                        <span class="card-texto">E-Commerce realizado para Tech Components.</span>
+                        <span class="card-fecha">{{proyecto.fecha}}</span>
+                        <span class="card-texto">{{proyecto.descripcion}}</span>
+                        <a href="{{proyecto?.link}}"  target="_blank">Ver Sitio</a>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col col-md-4 col-sm-6 col-card">
-            <div class="card c2">
-                <div class="card-cont">
-                    <div class="card-frente">
-                    </div>
-                    <div class="card-atras">
-                        <h5 class="card-fecha">Fecha</h5>
-                        <span class="card-texto">E-Commerce realizado para Tech Components.</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col col-md-4 col-sm-6 col-card">
-            <div class="card c3">
-                <div class="card-cont">
-                    <div class="card-frente">
-                    </div>
-                    <div class="card-atras">
-                        <h5 class="card-fecha">Fecha</h5>
-                        <span class="card-texto">E-Commerce realizado para Tech Components.</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row sep"></div>
-    <div class="row">
-        <div class="col col-md-4 col-sm-6 col-card">
-            <div class="card c4">
-                <div class="card-cont">
-                    <div class="card-frente">
-                    </div>
-                    <div class="card-atras">
-                        <h5 class="card-fecha">Fecha</h5>
-                        <span class="card-texto">E-Commerce realizado para Tech Components.</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col col-md-4 col-sm-6 col-card">
-            <div class="card c5">
-                <div class="card-cont">
-                    <div class="card-frente">
-                    </div>
-                    <div class="card-atras">
-                        <h5 class="card-fecha">Fecha</h5>
-                        <span class="card-texto">E-Commerce realizado para Tech Components.</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col col-md-4 col-sm-6 col-card">
-            <div class="card c6">
-                <div class="card-cont">
-                    <div class="card-frente">
-                    </div>
-                    <div class="card-atras">
-                        <h5 class="card-fecha">Fecha</h5>
-                        <span class="card-texto">E-Commerce realizado para Tech Components.</span>
-                    </div>
-                </div>
+            <div class="botones">
+              <button class="button editar" routerLink="/editproyecto/{{proyecto.id}}" *ngIf="isLogged">
+                <i class="bi bi-pencil"></i>
+            </button>
+              <button class="button borrar" *ngIf="isLogged" (click)="delete(proyecto.id)">
+                <i class="bi bi-x"></i>
+            </button>
             </div>
         </div>
     </div>
